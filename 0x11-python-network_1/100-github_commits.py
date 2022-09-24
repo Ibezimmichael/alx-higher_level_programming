@@ -19,8 +19,7 @@ if __name__ == "__main__":
         )
         response = requests.get(
             req_url,
-            headers={'Accept': 'application/vnd.github.v3+j',
-                     "Authorization: Bearer <YOUR-TOKEN>"}
+            headers={'Accept': 'application/vnd.github.v3+json'}
         )
         if response.status_code == 200:
             for commit in response.json():
